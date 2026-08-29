@@ -1,8 +1,8 @@
 # Как загрузить PilotLab в GitHub и включить демо
 
-Текущий репозиторий: `https://github.com/elenabezukhova-prog/EdTech-app`.
+Текущий репозиторий: `https://github.com/elenabezukhova/PilotLab`.
 
-Его можно оставить под прежним техническим именем или позже переименовать в `PilotLab` через **Settings → General → Repository name**. GitHub обычно сохраняет перенаправление со старого адреса, но после переименования всё равно нужно проверить ссылки в заявке и настройках Pages.
+Аккаунт и репозиторий уже переименованы. Во всех новых документах и публичных материалах используйте только актуальный адрес выше.
 
 ## Перед публикацией
 
@@ -20,7 +20,7 @@
 ## Вариант A — через сайт GitHub в существующий репозиторий
 
 1. Войдите в GitHub.
-2. Откройте `https://github.com/elenabezukhova-prog/EdTech-app`.
+2. Откройте `https://github.com/elenabezukhova/PilotLab`.
 3. Выберите **Add file → Upload files**.
 4. Откройте подготовленную папку `pilotlab-mvp`, выделите всё её содержимое и перетащите в окно загрузки. Перетаскивайте содержимое папки, а не родительскую папку целиком.
 5. В поле сообщения напишите `Rebrand public MVP as PilotLab`.
@@ -34,7 +34,7 @@
 
 ```bash
 cd "/Users/e-lena/Documents/Codex/2026-08-24/new-chat/outputs/GitHub_public_mvp"
-git clone https://github.com/elenabezukhova-prog/EdTech-app.git pilotlab-upload
+git clone https://github.com/elenabezukhova/PilotLab.git pilotlab-upload
 cp -R "pilotlab-mvp/." "pilotlab-upload/"
 cd "pilotlab-upload"
 git add .
@@ -62,14 +62,14 @@ git config --global user.email "EMAIL-USED-FOR-GITHUB"
 6. В качестве папки выберите `/(root)`.
 7. Нажмите **Save**.
 8. Подождите несколько минут и обновите страницу Settings → Pages.
-9. Для текущего имени ссылка будет выглядеть так: `https://elenabezukhova-prog.github.io/EdTech-app/`. После переименования репозитория путь изменится.
+9. После публикации ссылка будет выглядеть так: `https://elenabezukhova.github.io/PilotLab/`.
 
 GitHub предупреждает, что первая публикация иногда занимает до десяти минут.
 
 ## Что вставить в заявку
 
-- GitHub: `https://github.com/elenabezukhova-prog/EdTech-app`
-- Демо: `https://elenabezukhova-prog.github.io/EdTech-app/`
+- GitHub: `https://github.com/elenabezukhova/PilotLab`
+- Демо после включения GitHub Pages: `https://elenabezukhova.github.io/PilotLab/`
 
 Перед отправкой откройте обе ссылки в приватном окне браузера. Они должны работать без входа в ваш аккаунт.
 
