@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PilotLab — ты не пассажир, ты пилот. Демонстрационный тренажёр самостоятельной и безопасной работы с ИИ">
+  <meta name="theme-color" content="#17324d">
+  <title>PilotLab · публичный MVP курса «Интеллект — это ты»</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#mission">Перейти к заданию</a>
+
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Публичный исследовательский MVP</p>
+      <h1>PilotLab</h1>
+      <p class="brand-course">Курс «Интеллект — это ты»</p>
+    </div>
+    <div class="toolbar" aria-label="Настройки">
+      <button id="font-toggle" class="small-button" type="button" aria-pressed="false">Крупнее</button>
+      <div class="mode-switch" role="group" aria-label="Режим обучения">
+        <button type="button" data-mode="self" class="active">Самостоятельно</button>
+        <button type="button" data-mode="curator">С куратором</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="welcome" class="welcome">
+    <div class="welcome-card">
+      <p class="eyebrow">Две миссии · около пяти минут</p>
+      <h2>Ты не пассажир.<br>Ты — пилот.</h2>
+      <p class="lead"><strong>Ты управляешь. ИИ помогает.</strong> Попробуйте поставить безопасную задачу и распознать утверждение, которое требует проверки. Ошибки здесь не отнимают XP.</p>
+      <div class="safety-note">
+        <strong>Учебная среда</strong>
+        <span>Не вводите имя, телефон, адрес, документы и другие персональные данные.</span>
+      </div>
+      <button id="start-button" class="primary wide" type="button">Начать спокойно</button>
+      <p class="microcopy">Настоящий ИИ не подключён. Данные остаются в вашем браузере.</p>
+    </div>
+  </section>
+
+  <div id="workspace" class="workspace" hidden>
+    <aside class="progress-panel" aria-label="Личная карта прогресса">
+      <p class="section-label">Мой маршрут</p>
+      <div class="xp-card"><strong><span id="xp">0</span> XP</strong><span>без штрафа за повтор</span></div>
+      <div class="progress-track" aria-label="Прогресс"><span id="progress-bar"></span></div>
+      <p id="progress-text" class="microcopy">0 из 2 миссий</p>
+      <ol id="mission-map" class="mission-map"></ol>
+      <button id="reset-button" class="link-button" type="button">Начать демо заново</button>
+    </aside>
+
+    <main id="mission" class="mission-card" tabindex="-1">
+      <div id="mission-content"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      <div class="actions">
+        <button id="check-button" class="primary" type="button">Проверить</button>
+        <button id="retry-button" class="secondary" type="button" hidden>Повторить без штрафа</button>
+        <button id="next-button" class="primary" type="button" hidden>Следующая миссия</button>
+        <button id="different-button" class="quiet" type="button">Получилось иначе</button>
+      </div>
+    </main>
+
+    <aside class="help-panel">
+      <p class="section-label">Помощь</p>
+      <div id="mode-card" class="mode-card"></div>
+      <div class="hint-list" aria-label="Подсказки">
+        <button type="button" data-hint="0">Подсказка 1 · направление</button>
+        <button type="button" data-hint="1">Подсказка 2 · следующий шаг</button>
+        <button type="button" data-hint="2">Подсказка 3 · пример</button>
+      </div>
+      <div id="hint-output" class="hint-output" role="status" aria-live="polite">Открывайте подсказки по одной. XP не уменьшается.</div>
+    </aside>
+  </div>
+
+  <dialog id="different-dialog" class="dialog">
+    <form method="dialog">
+      <button class="dialog-close" value="cancel" aria-label="Закрыть">×</button>
+      <p class="eyebrow">Ветка восстановления</p>
+      <h2>Что получилось иначе?</h2>
+      <div id="branch-options" class="branch-options"></div>
+      <div id="branch-answer" class="branch-answer" role="status">Выберите наиболее похожую ситуацию.</div>
+      <button class="primary wide" value="done">Вернуться к миссии</button>
+    </form>
+  </dialog>
+
+  <footer>
+    <p>PilotLab · «Ты не пассажир. Ты — пилот» · без LLM и сетевой передачи данных · 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
